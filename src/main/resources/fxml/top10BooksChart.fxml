@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane fx:controller="controllers.TopBooksChartController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BarChart fx:id="booksChart" prefHeight="351.0" prefWidth="538.0" title="TOP 10 BOOKS DUE TO BORROWING">
+        <xAxis>
+          <CategoryAxis label="Book Title" side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="# times borrowed" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</StackPane>

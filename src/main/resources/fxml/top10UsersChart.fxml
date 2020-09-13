@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:controller="controllers.TopUsersChartController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BarChart fx:id="usersChart" title="Top 10 Users Due To Borrow/Return">
+        <xAxis>
+          <CategoryAxis label="Member Name" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Number Of Books Borrowed/Returned" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</StackPane>

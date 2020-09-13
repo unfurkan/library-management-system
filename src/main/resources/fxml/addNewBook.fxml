@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="329.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddNewBookController">
+   <children>
+      <JFXTextField fx:id="txtBookTitle" labelFloat="true" layoutX="131.0" layoutY="74.0" prefHeight="25.0" prefWidth="282.0" promptText="Book Title" />
+      <JFXTextField fx:id="txtBookAuthor" labelFloat="true" layoutX="131.0" layoutY="120.0" prefHeight="25.0" prefWidth="282.0" promptText="Author" />
+      <JFXTextField fx:id="txtBookGenre" labelFloat="true" layoutX="131.0" layoutY="165.0" prefHeight="25.0" prefWidth="282.0" promptText="Genre" />
+      <DatePicker fx:id="bookReleaseDate" layoutX="131.0" layoutY="212.0" prefHeight="25.0" prefWidth="282.0" promptText="Release Date" />
+      <JFXButton fx:id="saveButton" layoutX="131.0" layoutY="275.0" onAction="#addNewBook" prefHeight="33.0" prefWidth="119.0" style="-fx-background-color: #1976d2;" text="SAVE" />
+      <JFXButton fx:id="cancelButton" layoutX="294.0" layoutY="275.0" onAction="#closeWindow" prefHeight="33.0" prefWidth="119.0" style="-fx-background-color: #1976d2;" text="CANCEL" />
+      <JFXTextField fx:id="txtBookISBN" labelFloat="true" layoutX="131.0" layoutY="30.0" prefHeight="25.0" prefWidth="282.0" promptText="Book ISBN" />
+   </children>
+</AnchorPane>

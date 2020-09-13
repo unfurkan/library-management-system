@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManageBooksController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+            <Tab text="Borrow Book">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="47.0" layoutY="50.0" prefHeight="100.0" prefWidth="506.0">
+                           <children>
+                              <JFXTextField fx:id="txtBookBorrowISBN" labelFloat="true" onAction="#loadBookInfo" promptText="Enter Book ISBN(press enter)">
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <VBox alignment="CENTER" prefHeight="100.0" prefWidth="169.0">
+                                 <children>
+                                    <Text fx:id="txtbookTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text fx:id="txtbookAuthor" strokeType="OUTSIDE" strokeWidth="0.0" text="Author">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text fx:id="txtbookStatus" strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="53.0" layoutY="182.0" prefHeight="88.0" prefWidth="506.0">
+                           <children>
+                              <JFXTextField fx:id="txtuserID" labelFloat="true" onAction="#loadUserInfo" promptText="Enter User ID(press enter)">
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <VBox alignment="CENTER" prefHeight="100.0" prefWidth="169.0">
+                                 <children>
+                                    <Text fx:id="txtuserName" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Text fx:id="txtuserContact" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <JFXButton layoutY="316.0" onAction="#handleBorrowBook" prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: #1976d2;" text="Borrow" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Return/Renew Book">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="57.0" prefWidth="600.0">
+                           <children>
+                              <JFXTextField fx:id="txtBookReturnISBN" labelFloat="true" onAction="#loadBookInfoListView" prefHeight="25.0" prefWidth="159.0" promptText="Enter Book ISBN(press enter)" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="-3.0" layoutY="62.0" prefHeight="246.0" prefWidth="606.0">
+                           <children>
+                              <ListView fx:id="borrowedBookList" prefHeight="223.0" prefWidth="734.0" />
+                           </children>
+                        </HBox>
+                        <JFXButton layoutX="-4.0" layoutY="304.0" onAction="#handleReturnBook" prefHeight="61.0" prefWidth="292.0" text="Return" />
+                        <JFXButton layoutX="300.0" layoutY="308.0" onAction="#handleRenew" prefHeight="57.0" prefWidth="292.0" text="Renew" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="report1" text="Report">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="211.0" prefWidth="600.0">
+                     <children>
+                        <JFXButton layoutY="307.0" prefHeight="55.0" prefWidth="600.0" text="Report" />
+                        <JFXTextField labelFloat="true" layoutX="180.0" layoutY="101.0" prefHeight="25.0" prefWidth="225.0" promptText="Person ID" />
+                        <JFXTextArea labelFloat="true" layoutX="177.0" layoutY="157.0" prefHeight="49.0" prefWidth="232.0" promptText="DESCRIPTION" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

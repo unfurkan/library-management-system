@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="362.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TopGenreChartController">
+   <children>
+      <BarChart fx:id="userChart" prefHeight="377.0" prefWidth="402.0" title="TOP 10 GENRE DUE TO BORROW">
+         <xAxis>
+            <CategoryAxis label="Book Genre" side="BOTTOM" fx:id="x" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="y" label="Number of books belonged" prefHeight="233.0" prefWidth="49.0" side="LEFT" />
+         </yAxis>
+      </BarChart>
+   </children>
+</StackPane>
